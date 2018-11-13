@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Media from './media';
-
 import './playlist.css';
-class Playlist extends Component {
-	render() {
-		const playlist = this.props.data.categories[0].playlist
-		console.log(this.props.data);
+
+function Playlist(props) {
 		return (
-			<div className='Playlist'>
-				{
-					playlist.map( (item) => {
-						return <Media {...item} key={item.id}/>
-					})
-				}
+			<div>
+				{props.data.categories.map( (category) => {
+					return (
+						<div key={category.id}>
+							<h4 className='Description'>{category.description}</h4>
+							<h2 className='Title'>{category.title}</h2>
+							<div className='Playlist'>
+								{category.playlist.map( (item) => {
+									return <Media {...item} key={item.id}/>
+								})}
+							</div>
+						</div>
+					);
+				})}
 			</div>
 		)
-	}
 }
 
-export default Playlist
+export default Playlist;

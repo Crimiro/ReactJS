@@ -1,5 +1,15 @@
 .Playlist {
 	display: flex;
 	overflow-y: hidden;
-	padding-bottom: 80px;
+	padding-bottom: 90px;
+}
+.Title {
+	color: #44546b;
+	padding: 0px;
+	margin: 0px;
+}
+.Description {
+	color : gray;
+	padding: 0px;
+	margin: 0px;
 }
