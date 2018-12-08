@@ -22,7 +22,7 @@ class Home extends Component {
 			<HandleError>
 				<HomeLayout>
 					<Related />
-					<VideoPlayer/>
+					<VideoPlayer autoplay/>
 				<Categories categories={this.props.data.categories}
 						handleOpenModal={this.handleOpenModal}
 					/>
